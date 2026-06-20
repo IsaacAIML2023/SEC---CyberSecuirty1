@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /questions/{questionId} {
+      allow read, write: if false; // Only Cloud Functions can access answers.
+    }
+    match /levels/{levelId} {
+      allow read, write: if false; // Access through Cloud Functions only.
+    }
+    match /results/{resultId} {
+      allow read, write: if false; // Student result writes happen through Cloud Functions.
+    }
+  }
+}

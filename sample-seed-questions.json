@@ -1,0 +1,26 @@
+[
+  {
+    "level": 1,
+    "question": "Which port is commonly used by SSH?",
+    "options": ["21", "22", "80", "443"],
+    "answer": 1,
+    "explanation": "SSH commonly uses TCP port 22 for secure remote login.",
+    "difficulty": "Easy"
+  },
+  {
+    "level": 1,
+    "question": "A public web server exposes MySQL port 3306 to the internet. What is the best first action?",
+    "options": ["Ignore it", "Restrict access using firewall/security group", "Disable HTTP", "Change website logo"],
+    "answer": 1,
+    "explanation": "Database ports should not be publicly exposed unless strictly required and protected.",
+    "difficulty": "Medium"
+  },
+  {
+    "level": 2,
+    "question": "Multiple failed logins followed by one successful login from the same IP suggests what?",
+    "options": ["Normal browsing", "Possible brute-force attack", "DNS failure", "Disk cleanup"],
+    "answer": 1,
+    "explanation": "Failed attempts followed by success can indicate password guessing or credential attack.",
+    "difficulty": "Medium"
+  }
+]

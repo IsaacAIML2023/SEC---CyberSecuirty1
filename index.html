@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industry Ready Cybersecurity Assessment Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Industry Ready Cybersecurity Assessment Portal</h1>
+      <p>Pass Level 1 to unlock Level 2. Pass Level 2 to unlock Level 3.</p>
+    </header>
+
+    <section class="card" id="studentBox">
+      <h2>Student Details</h2>
+      <label>Name <input id="studentName" placeholder="Enter student name"></label>
+      <label>Register No. <input id="regNo" placeholder="Enter register number"></label>
+      <button onclick="saveStudent()">Start Assessment</button>
+    </section>
+
+    <section class="grid">
+      <div class="level-card" id="level1Card">
+        <h2>Level 1: Screening Round</h2>
+        <p>Basic security reasoning and interview screening.</p>
+        <p><b>Pass Mark:</b> 60%</p>
+        <button onclick="startLevel(1)">Start Level 1</button>
+      </div>
+
+      <div class="level-card locked" id="level2Card">
+        <h2>Level 2: Technical Investigation</h2>
+        <p>Log analysis, SOC reasoning and detection logic.</p>
+        <p><b>Pass Mark:</b> 65%</p>
+        <button onclick="startLevel(2)">Start Level 2</button>
+      </div>
+
+      <div class="level-card locked" id="level3Card">
+        <h2>Level 3: Interview Simulation</h2>
+        <p>Incident response, decision making and security leadership.</p>
+        <p><b>Pass Mark:</b> 70%</p>
+        <button onclick="startLevel(3)">Start Level 3</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="quizBox">
+      <h2 id="quizTitle"></h2>
+      <div id="questions"></div>
+      <button onclick="submitLevel()">Submit Level</button>
+    </section>
+
+    <section class="card hidden" id="resultBox">
+      <h2>Result</h2>
+      <div id="resultText"></div>
+      <button onclick="downloadCertificate()">Download Result Certificate</button>
+      <button onclick="location.reload()">Back to Home</button>
+    </section>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
